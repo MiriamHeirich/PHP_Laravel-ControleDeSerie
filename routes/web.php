@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SeriesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/ola', function()
-// {
-//     echo ('Olá, Mundo');
-// });
+Route::get('/series', [SeriesController::class, 'index']);
+
 
